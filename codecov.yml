@@ -1,0 +1,6 @@
+ignore:
+    - "features/**/*"
+    - "internal/ascii/*"
+    - "mock/*"
+    - "jar.go"
+    - "punycode.go"

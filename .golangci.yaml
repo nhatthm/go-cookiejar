@@ -1,0 +1,67 @@
+# See https://github.com/golangci/golangci-lint/blob/master/.golangci.example.yml
+run:
+  tests: true
+  skip-files:
+    - dummy_publicsuffix_test.go
+    - example_test.go
+    - jar.go
+    - jar_test.go
+    - punycode.go
+    - punycode_test.go
+  skip-dirs:
+    - internal/ascii
+
+linters-settings:
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+  gocyclo:
+    min-complexity: 20
+  dupl:
+    threshold: 100
+  misspell:
+    locale: US
+  unused:
+    check-exported: false
+  unparam:
+    check-exported: true
+
+linters:
+  enable-all: true
+  disable:
+    - deadcode
+    - exhaustivestruct
+    - exhaustruct
+    - forbidigo
+    - gci
+    - gochecknoglobals
+    - golint
+    - gomnd
+    - ifshort
+    - interfacer
+    - ireturn
+    - lll
+    - maligned
+    - nolintlint # https://github.com/golangci/golangci-lint/issues/3063
+    - nonamedreturns
+    - nosnakecase
+    - rowserrcheck
+    - scopelint
+    - structcheck
+    - tagliatelle
+    - varcheck
+    - varnamelen
+    - wastedassign
+    - wrapcheck
+
+issues:
+  exclude-use-default: false
+  exclude-rules:
+    - linters:
+        - dupl
+        - funlen
+        - goconst
+        - goerr113
+        - gomnd
+        - noctx
+      path: "_test.go"
