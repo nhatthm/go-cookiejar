@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/bool64/ctxd v1.2.1
 	github.com/spf13/afero v1.9.5
-	github.com/stretchr/testify v1.8.3
+	github.com/stretchr/testify v1.8.4
 	github.com/swaggest/assertjson v1.8.1
 	go.nhat.io/aferomock v0.4.0
 )
