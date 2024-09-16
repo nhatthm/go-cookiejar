@@ -103,6 +103,7 @@ func TestPersistentJar_SetCookies_NoAutoSync_Success(t *testing.T) {
     "example.com;/;id": {
       "Name": "id",
       "Value": "42",
+      "Quoted": false,
       "Domain": "example.com",
       "Path": "/",
       "SameSite": "",
@@ -118,6 +119,7 @@ func TestPersistentJar_SetCookies_NoAutoSync_Success(t *testing.T) {
     "example.com;/;username": {
       "Name": "username",
       "Value": "john",
+      "Quoted": false,
       "Domain": "example.com",
       "Path": "/",
       "SameSite": "",
@@ -133,6 +135,7 @@ func TestPersistentJar_SetCookies_NoAutoSync_Success(t *testing.T) {
     "example.com;/;email": {
       "Name": "email",
       "Value": "john@example.com",
+      "Quoted": false,
       "Domain": "example.com",
       "Path": "/",
       "SameSite": "",
@@ -257,6 +260,7 @@ func TestPersistentJar_SetCookies_AutoSync_Success(t *testing.T) {
     "example.com;/;username": {
       "Name": "username",
       "Value": "john.doe",
+      "Quoted": false,
       "Domain": "example.com",
       "Path": "/",
       "SameSite": "",

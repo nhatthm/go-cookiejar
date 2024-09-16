@@ -207,6 +207,7 @@ func WithPublicSuffixList(list PublicSuffixList) PersistentJarOption {
 type Entry struct {
 	Name       string
 	Value      string
+	Quoted     bool
 	Domain     string
 	Path       string
 	SameSite   string

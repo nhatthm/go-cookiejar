@@ -12,7 +12,7 @@ a filesystem and retrieving them using [`spf13/afero`](https://github.com/spf13/
 
 ## Prerequisites
 
-- `Go >= 1.20`
+- `Go >= 1.23`
 
 ## Install
 
