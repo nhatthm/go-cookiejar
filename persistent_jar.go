@@ -20,13 +20,6 @@ const (
 	permReadonly = os.FileMode(0o600)
 )
 
-// jar is just for generating mock.
-//
-//go:generate mockery --name jar --exported --output mock --outpkg mock --filename jar.go
-type jar interface {
-	http.CookieJar
-}
-
 var _ http.CookieJar = (*PersistentJar)(nil)
 
 // PersistentJar persists cookies to a file.
@@ -207,6 +200,7 @@ func WithPublicSuffixList(list PublicSuffixList) PersistentJarOption {
 type Entry struct {
 	Name       string
 	Value      string
+	Quoted     bool
 	Domain     string
 	Path       string
 	SameSite   string

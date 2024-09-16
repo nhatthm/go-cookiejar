@@ -1,0 +1,12 @@
+dry-run: false
+with-expecter: false
+mockname: "{{.InterfaceName}}"
+filename: "{{ .InterfaceName | snakecase }}.go"
+dir: "mock"
+outpkg: mock
+packages:
+  net/http:
+    config:
+      include-regex: "CookieJar"
+      mockname: "Jar"
+      filename: "jar.go"
