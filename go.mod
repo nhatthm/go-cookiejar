@@ -7,7 +7,7 @@ require (
 	github.com/spf13/afero v1.11.0
 	github.com/stretchr/testify v1.9.0
 	github.com/swaggest/assertjson v1.9.0
-	go.nhat.io/aferomock v0.4.0
+	go.nhat.io/aferomock v0.5.0
 )
 
 require (
@@ -22,7 +22,6 @@ require (
 	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/yudai/gojsondiff v1.0.0 // indirect
 	github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82 // indirect
-	golang.org/x/text v0.14.0 // indirect
-	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
+	golang.org/x/text v0.18.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
