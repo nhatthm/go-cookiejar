@@ -7,7 +7,7 @@ require (
 	github.com/spf13/afero v1.11.0
 	github.com/stretchr/testify v1.9.0
 	github.com/swaggest/assertjson v1.9.0
-	go.nhat.io/aferomock v0.5.0
+	go.nhat.io/aferomock v0.6.0
 )
 
 require (
