@@ -54,8 +54,8 @@ github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82 h1:BHyfKlQyqbsFN5p3Ifn
 github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82/go.mod h1:lgjkn3NuSvDfVJdfcVVdX+jpBxNmX4rDAzaS45IcYoM=
 github.com/yudai/pp v2.0.1+incompatible h1:Q4//iY4pNF6yPLZIigmvcl7k/bPgrcTPIFIcmawg5bI=
 github.com/yudai/pp v2.0.1+incompatible/go.mod h1:PuxR/8QJ7cyCkFp/aUDS+JY727OFEZkTdatxwunjIkc=
-go.nhat.io/aferomock v0.6.0 h1:LlGvABDSOs2pCdXweFIQ/tDF1oV0rWbr7Ih+N21EeQs=
-go.nhat.io/aferomock v0.6.0/go.mod h1:DexRX1DiNRZwfGYrMdC5zjA09Mw95LrfYceLBlPZd5Y=
+go.nhat.io/aferomock v0.7.0 h1:jip7tIX2Vt3M54mE9PTYMOrTN/IMZqlcpCMyIr/XFEc=
+go.nhat.io/aferomock v0.7.0/go.mod h1:DexRX1DiNRZwfGYrMdC5zjA09Mw95LrfYceLBlPZd5Y=
 golang.org/x/net v0.19.0 h1:zTwKpTd2XuCqf8huc7Fo2iSy+4RHPd10s4KzeTnVr1c=
 golang.org/x/net v0.19.0/go.mod h1:CfAk/cbD4CthTvqiEl8NpboMuiuOYsAr/7NOjZJtv1U=
 golang.org/x/sys v0.0.0-20220908164124-27713097b956/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
