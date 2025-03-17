@@ -12,8 +12,6 @@ linters-settings:
     threshold: 100
   misspell:
     locale: US
-  unused:
-    check-exported: false
 
 linters:
   enable-all: true
