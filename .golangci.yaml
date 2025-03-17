@@ -12,30 +12,23 @@ linters-settings:
     threshold: 100
   misspell:
     locale: US
-  unused:
-    check-exported: false
-  unparam:
-    check-exported: true
 
 linters:
   enable-all: true
   disable:
-    - copyloopvar
     - depguard
-    - execinquery
     - exhaustruct
-    - exportloopref
     - forbidigo
     - gci
     - gochecknoglobals
-    - gomnd
-    - intrange
     - ireturn
     - lll
+    - mnd
     - nolintlint # https://github.com/golangci/golangci-lint/issues/3063
     - nonamedreturns
     - rowserrcheck
     - tagliatelle
+    - tenv
     - testifylint
     - varnamelen
     - wastedassign
@@ -59,6 +52,6 @@ issues:
         - funlen
         - goconst
         - goerr113
-        - gomnd
+        - mnd
         - noctx
       path: "_test.go"
