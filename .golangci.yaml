@@ -1,57 +1,71 @@
-# See https://github.com/golangci/golangci-lint/blob/master/.golangci.example.yml
+version: "2"
 run:
   tests: true
-
-linters-settings:
-  errcheck:
-    check-type-assertions: true
-    check-blank: true
-  gocyclo:
-    min-complexity: 20
-  dupl:
-    threshold: 100
-  misspell:
-    locale: US
-
 linters:
-  enable-all: true
+  default: all
   disable:
     - depguard
     - exhaustruct
     - forbidigo
-    - gci
     - gochecknoglobals
     - ireturn
     - lll
     - mnd
-    - nolintlint # https://github.com/golangci/golangci-lint/issues/3063
+    - nolintlint
     - nonamedreturns
     - rowserrcheck
     - tagliatelle
-    - tenv
     - testifylint
     - varnamelen
     - wastedassign
     - wrapcheck
-
-issues:
-  exclude-use-default: false
-  exclude-files:
-    - dummy_publicsuffix_test.go
-    - example_test.go
-    - jar.go
-    - jar_test.go
-    - punycode.go
-    - punycode_test.go
-  exclude-dirs:
-    - internal/ascii
-  exclude-rules:
-    - linters:
-        - dupl
-        - err113
-        - funlen
-        - goconst
-        - goerr113
-        - mnd
-        - noctx
-      path: "_test.go"
+  settings:
+    dupl:
+      threshold: 100
+    errcheck:
+      check-type-assertions: true
+      check-blank: true
+    gocyclo:
+      min-complexity: 20
+    misspell:
+      locale: US
+  exclusions:
+    generated: lax
+    rules:
+      - linters:
+          - dupl
+          - err113
+          - funlen
+          - goconst
+          - mnd
+          - noctx
+        path: _test.go
+    paths:
+      - dummy_publicsuffix_test.go
+      - example_test.go
+      - jar.go
+      - jar_test.go
+      - punycode.go
+      - punycode_test.go
+      - internal/ascii
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gofmt
+    - gofumpt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - dummy_publicsuffix_test.go
+      - example_test.go
+      - jar.go
+      - jar_test.go
+      - punycode.go
+      - punycode_test.go
+      - internal/ascii
+      - third_party$
+      - builtin$
+      - examples$
