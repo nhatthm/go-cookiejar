@@ -19,6 +19,7 @@ linters:
     - varnamelen
     - wastedassign
     - wrapcheck
+    - wsl
   settings:
     dupl:
       threshold: 100
