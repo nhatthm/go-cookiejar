@@ -11,7 +11,7 @@ func TestEntry_HasSameProps(t *testing.T) {
 	t.Parallel()
 
 	exported := make(map[string]reflect.Type)
-	typeOfExported := reflect.TypeFor[entry]()
+	typeOfExported := reflect.TypeFor[Entry]()
 
 	for i := range typeOfExported.NumField() {
 		field := typeOfExported.Field(i)
