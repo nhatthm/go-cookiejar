@@ -1,12 +1,12 @@
-dry-run: false
-with-expecter: false
-mockname: "{{.InterfaceName}}"
-filename: "{{ .InterfaceName | snakecase }}.go"
-dir: "mock"
-outpkg: mock
+dir: mock
+structname: '{{.InterfaceName}}'
+pkgname: mock
+template: testify
+template-data:
+  unroll-variadic: true
 packages:
   net/http:
     config:
-      include-regex: "CookieJar"
-      mockname: "Jar"
+      include-interface-regex: CookieJar
+      structname: Jar
       filename: "jar.go"
