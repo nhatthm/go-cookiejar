@@ -11,7 +11,7 @@ func TestEntry_HasSameProps(t *testing.T) {
 	t.Parallel()
 
 	exported := make(map[string]reflect.Type)
-	typeOfExported := reflect.TypeOf(Entry{})
+	typeOfExported := reflect.TypeFor[entry]()
 
 	for i := range typeOfExported.NumField() {
 		field := typeOfExported.Field(i)
@@ -19,7 +19,7 @@ func TestEntry_HasSameProps(t *testing.T) {
 	}
 
 	unexported := make(map[string]reflect.Type)
-	typeOfUnexported := reflect.TypeOf(entry{})
+	typeOfUnexported := reflect.TypeFor[entry]()
 
 	for i := range typeOfUnexported.NumField() {
 		field := typeOfUnexported.Field(i)
