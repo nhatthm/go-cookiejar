@@ -6,11 +6,14 @@ linters:
   disable:
     - depguard
     - exhaustruct
+    - exhaustruct_v5
     - forbidigo
     - gochecknoglobals
+    - gomodguard
     - ireturn
     - lll
     - mnd
+    - noinlineerr
     - nolintlint
     - nonamedreturns
     - rowserrcheck
