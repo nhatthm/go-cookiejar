@@ -1,7 +1,7 @@
 MODULE_NAME = cookiejar
 
-GOLANGCI_LINT_VERSION ?= v2.13.0
-MOCKERY_VERSION ?= v3.7.4
+GOLANGCI_LINT_VERSION ?= v2.14.0
+MOCKERY_VERSION ?= v3.8.0
 
 GO ?= go
 GOLANGCI_LINT ?= $(shell go env GOPATH)/bin/golangci-lint-$(GOLANGCI_LINT_VERSION)
@@ -59,16 +59,16 @@ test-unit:
 	$(Q)$(GO) test -gcflags=-l -coverprofile=unit.coverprofile -covermode=atomic -race ./...
 
 
-.PHONY: generate
-generate: generate-jar generate-mocks
+.PHONY: gen
+gen: gen-jar gen-mocks
 
-.PHONY: generate-mocks
-generate-mocks: $(MOCKERY)
-	@printf -- "$(OK_COLOR)==> generate mocks$(NO_COLOR)\n"
+.PHONY: gen-mocks
+gen-mocks: $(MOCKERY)
+	@printf -- "$(OK_COLOR)==> gen mocks$(NO_COLOR)\n"
 	$(Q)GOROOT=$(GOROOT_DIR) PATH="$(GOROOT_DIR)/bin:$$PATH" $(MOCKERY)
 
-.PHONY: generate-jar
-generate-jar:
+.PHONY: gen-jar
+gen-jar:
 	@printf -- "$(OK_COLOR)==> sync$(NO_COLOR)\n"
 	$(Q)ls -1 *.go | grep -v persistent_jar | xargs rm -f
 	$(Q)rm -f internal/ascii/*
