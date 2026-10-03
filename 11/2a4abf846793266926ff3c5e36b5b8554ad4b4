@@ -1,0 +1,25 @@
+README.md
+  s_eab79f6a5c9a10::t_51d380d5aae95f 143,145,149-151
+  s_eab79f6a5c9a10::t_ee564b1a29caf7 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "112a4abf846793266926ff3c5e36b5b8554ad4b4",
+  "prompts": {},
+  "humans": {
+    "h_1bffb29edaf571": {
+      "author": "Nhat <contact@nhat.me>"
+    }
+  },
+  "sessions": {
+    "s_eab79f6a5c9a10": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1791030886938",
+        "model": "unknown"
+      },
+      "human_author": "Nhat <contact@nhat.me>"
+    }
+  }
+}
